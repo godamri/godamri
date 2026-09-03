@@ -6,7 +6,8 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "wrangler pages dev",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "deploy": "echo 'Artifacts ready for edge distribution'"
   },
   "dependencies": {
     "@react-router/cloudflare": "^7.2.0",
