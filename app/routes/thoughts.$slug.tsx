@@ -110,7 +110,7 @@ export default function ThoughtDetailPage() {
           prose-li:text-ink-muted prose-li:text-base sm:prose-li:text-[17px]
           prose-strong:text-ink prose-strong:font-semibold
           prose-a:text-cobalt prose-a:font-medium hover:prose-a:underline
-          prose-code:font-mono prose-code:text-cobalt prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+          prose-code:font-mono prose-code:text-slate-800 prose-code:bg-slate-100/90 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:border prose-code:border-slate-200/80 prose-code:text-[13px] prose-code:font-normal prose-code:before:content-none prose-code:after:content-none
           prose-blockquote:border-l-4 prose-blockquote:border-cobalt prose-blockquote:pl-5 prose-blockquote:italic prose-blockquote:text-slate-600"
         dangerouslySetInnerHTML={{ __html: thought.htmlContent }}
       />

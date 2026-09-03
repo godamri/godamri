@@ -66,12 +66,15 @@ marked.use({
       const highlighted = grammar
         ? Prism.highlight(text, grammar, language)
         : escapeHtml(text);
-      return `<div class="relative my-6 rounded-lg overflow-hidden group border border-slate-800">
-        <div class="flex items-center justify-between px-4 py-1.5 bg-slate-900 border-b border-slate-800 text-[11px] font-mono text-slate-400">
-          <span class="uppercase tracking-wider font-medium">${language}</span>
-          <span class="text-slate-500">source</span>
+      return `<div class="relative my-8 rounded-lg overflow-hidden border border-slate-200 bg-white shadow-2xs">
+        <div class="flex items-center justify-between px-4 py-2 bg-slate-50 border-b border-slate-200 text-xs font-mono">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-slate-300"></span>
+            <span class="uppercase tracking-wider font-semibold text-slate-700">${language}</span>
+          </div>
+          <span class="text-slate-400 text-[11px] font-mono">source</span>
         </div>
-        <pre class="!m-0 !rounded-none language-${language}"><code class="language-${language}">${highlighted}</code></pre>
+        <pre class="!m-0 !p-5 !bg-[#F8FAFC] language-${language} overflow-x-auto text-[13.5px] leading-relaxed font-mono"><code class="language-${language}">${highlighted}</code></pre>
       </div>`;
     },
   },
