@@ -38,7 +38,7 @@ export const authorProfile = {
     github: "https://github.com/godamri",
     linkedin: "https://www.linkedin.com/in/godamri",
     twitter: "https://x.com/godamri",
-    email: "mailto:contact@godamri.com",
+    email: "mailto:contact@godamri.my.id",
   },
 };
 
