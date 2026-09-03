@@ -32,7 +32,7 @@ export const authorProfile = {
     "“I like turning complicated technical problems into systems that are easier to understand, operate, and maintain.”",
   aboutParagraphs: [
     "I'm a software engineer with extensive experience building high-concurrency transactional platforms, payment infrastructure, and automated systems.",
-    "Over the years, I've engineered core merchant platforms, retail Cloud POS systems, voucher & promotion rule engines, multi-principal loyalty ledgers, end-to-end e-commerce pipelines, algorithmic trading systems, and generative media automation.",
+    "Over the years, I've engineered core merchant platforms, O2O retail POS systems, voucher & promotion rule engines, multi-principal loyalty ledgers, end-to-end e-commerce pipelines, algorithmic trading systems, and generative media automation.",
   ],
   socials: {
     github: "https://github.com/godamri",
@@ -74,9 +74,9 @@ export const selectedWork: Project[] = [
     external: false,
   },
   {
-    id: "cloud-pos",
+    id: "o2o-retail-pos",
     num: "04",
-    title: "CLOUD POS",
+    title: "O2O RETAIL POS",
     description: "Online-to-Offline (O2O) retail counter system synchronizing e-commerce inventory with high-throughput in-store transactions and Accurate.id accounting.",
     stack: "PHP (Laravel Octane) · PostgreSQL · Redis · Accurate.id · Linux VPS",
     period: "2022–2024",
@@ -128,7 +128,7 @@ export const domains: Domain[] = [
   },
   {
     num: "03",
-    title: "Retail Cloud POS (O2O)",
+    title: "O2O Retail POS",
     description: "Physical Store Counters · Real-Time Inventory Sync · Accurate.id Accounting",
   },
   {
