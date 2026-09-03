@@ -24,6 +24,15 @@ export const meta: MetaFunction = () => {
         "Reflections and technical essays about building software, managing complexity, and scaling distributed systems.",
     },
     { property: "og:type", content: "website" },
+    { property: "og:site_name", content: "Godamri" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:creator", content: authorProfile.handle },
+    { name: "twitter:title", content: `Thoughts & Writing — ${authorProfile.name}` },
+    {
+      name: "twitter:description",
+      content:
+        "Reflections and technical essays on engineering, architecture, and systems.",
+    },
   ];
 };
 
@@ -320,6 +329,7 @@ export default function ThoughtsIndexPage() {
                 <input
                   type="email"
                   required
+                  aria-label="Email address"
                   placeholder="engineer@domain.com"
                   className="bg-slate-50 border border-slate-200 text-ink text-sm px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-cobalt/20 focus:border-cobalt flex-grow h-10 transition-all placeholder:text-slate-400"
                 />

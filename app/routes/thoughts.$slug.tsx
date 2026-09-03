@@ -15,9 +15,14 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     { property: "og:title", content: `${thought.title} — ${authorProfile.name}` },
     { property: "og:description", content: thought.excerpt },
     { property: "og:type", content: "article" },
+    { property: "og:site_name", content: "Godamri" },
     { property: "article:published_time", content: thought.date },
     { property: "article:author", content: authorProfile.fullName },
     { property: "article:section", content: thought.categoryLabel },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:creator", content: authorProfile.handle },
+    { name: "twitter:title", content: `${thought.title} — ${authorProfile.name}` },
+    { name: "twitter:description", content: thought.excerpt },
   ];
 };
 

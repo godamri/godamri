@@ -17,11 +17,12 @@ Jika proyek dikerjakan di bawah NDA:
 ### Identitas Proyek
 - [ ] **Nama Proyek**: `HELIX` (apakah tetap nama ini, atau ada nama lain: `____________________`)
 - [ ] **Tipe Industri**:
-  - [ ] Crypto / Web3
+  - [x] Crypto / Web3
   - [ ] Forex / Commodity
   - [ ] Equity / Stock Market
-  - [ ] Internal Algorithmic Trading Desk
-- [ ] **Periode Waktu**: `2024–Present` (atau: `____________________`)
+  - [x] Internal Algorithmic Trading Desk
+- [ ] **Periode Waktu**: `2026–Present` (atau: `____________________`)
+ini personal project, gue pakai sendiri
 
 ### Peran & Kepemilikan (Ownership)
 - [ ] Lead Architect (Merancang arsitektur sistem dari awal)
@@ -33,6 +34,7 @@ Jika proyek dikerjakan di bawah NDA:
 - Database & Cache: `[ ] PostgreSQL  [ ] Redis  [ ] TimescaleDB  [ ] ClickHouse`
 - Messaging & Transport: `[ ] WebSockets  [ ] gRPC  [ ] NATS  [ ] ZeroMQ  [ ] Kafka`
 - Infra: `[ ] Linux VPS  [ ] Docker  [ ] Kubernetes  [ ] Bare Metal`
+linux vps, postgre, redis pub-sub, rust, python, websocket
 
 ### Metrik Kuantitatif & Dampak Bisnis *(Isi yang ada/relevan)*
 - [ ] **Latency Eksekusi**: `[  ] sub-millisecond (< 1ms)  [  ] < 10ms  [  ] < 50ms`
@@ -40,7 +42,7 @@ Jika proyek dikerjakan di bawah NDA:
 - [ ] **Risk / Safety Check**: `[  ] Pre-trade risk control  [  ] Automated circuit breaker  [  ] Real-time liquidation`
 
 ### Masalah Terberat yang Diselesaikan
-- Deskripsi 1-2 kalimat: `____________________________________________________________________________________________________`
+- Deskripsi 1-2 kalimat: sudah running auto trade oleh bot dengan signal generator dan risk management dinamis`____________________________________________________________________________________________________`
 
 ---
 
@@ -56,23 +58,25 @@ Jika proyek dikerjakan di bawah NDA:
   - [ ] Fintech / Payment Discount & Cashback Engine
   - [ ] Ride Hailing / Food Delivery Promo Engine
 - [ ] **Periode Waktu**: `2023–2024` (atau: `____________________`)
+sekitar 2018, coupon, voucher, cashback, rules
 
 ### Tech Stack yang Sebenarnya Digunakan
 - Bahasa: `[ ] Go  [ ] PHP/Laravel  [ ] Java  [ ] Node.js/TypeScript`
 - Database: `[ ] PostgreSQL  [ ] MySQL  [ ] Redis Cluster  [ ] MongoDB`
 - Concurrency & Lock: `[ ] Redis Distributed Lock (Redlock)  [ ] DB Row-level locking (Pessimistic)  [ ] Optimistic Lock`
 - Queue / Events: `[ ] Kafka  [ ] RabbitMQ  [ ] NATS  [ ] Redis Streams`
+php, laravel, redis, linux vps, mariadb
 
 ### Metrik Kuantitatif Kunci
 - [ ] **Traffic Peak (Double Date / Flash Sale)**: `____________________ TPS / RPM` *(misal: 10,000+ TPS saat 11.11)*
 - [ ] **Proteksi Kuota & Anti-Double Claim**:
-  - [ ] Zero race condition pada perebutan voucher terbatas
-  - [ ] Real-time quota deduction dengan rollback otomatis jika checkout batal
+  - [x] Zero race condition pada perebutan voucher terbatas
+  - [x] Real-time quota deduction dengan rollback otomatis jika checkout batal
 - [ ] **Kecepatan Evaluasi Aturan Promo**: `____________________ ms` *(misal: < 15ms evaluasi kombinasi multi-voucher)*
 
 ### Masalah Terberat yang Diselesaikan
-- [ ] Mencegah voucher jebol / overselling kuota saat traffic lonjak ribuan request per detik
-- [ ] Evaluasi rule promo yang kompleks (misal: syarat metode pembayaran, minimum belanja, kuota per user)
+- [x] Mencegah voucher jebol / overselling kuota saat traffic lonjak ribuan request per detik
+- [x] Evaluasi rule promo yang kompleks (misal: syarat metode pembayaran, minimum belanja, kuota per user)
 - [ ] Catatan singkat solusi Anda: `________________________________________________________________________________`
 
 ---
@@ -85,22 +89,23 @@ Jika proyek dikerjakan di bawah NDA:
   - [ ] `MERCHANT PLATFORM & SETTLEMENT`
   - [ ] Nama lain: `____________________`
 - [ ] **Tipe Bisnis**:
-  - [ ] Payment Gateway / QRIS Acquirer
-  - [ ] PPOB / Billers Platform
+  - [x] Payment Gateway / QRIS Acquirer
+  - [x] PPOB / Billers Platform
   - [ ] POS / Retail Multi-outlet Management
 - [ ] **Periode Waktu**: `2023–2024` (atau: `____________________`)
-
+sekitar 2019 - 2022
 ### Fitur & Tanggung Jawab Utama
-- [ ] **Hierarki Merchant**: Kantor Pusat (HQ) -> Cabang (Branch) -> Kasir / Terminal
-- [ ] **Settlement & Payout**: Rekonsiliasi transaksi otomatis & transfer saldo ke rekening bank merchant
-- [ ] **Fee Engine**: Pemotongan MDR (Merchant Discount Rate), admin fee, dan bagi hasil mitra
-- [ ] **KYC & Onboarding**: Verifikasi dokumen legalitas & aktivasi QRIS
+- [x] **Hierarki Merchant**: Kantor Pusat (HQ) -> Cabang (Branch) -> Kasir / Terminal
+- [x] **Settlement & Payout**: Rekonsiliasi transaksi otomatis & transfer saldo ke rekening bank merchant
+- [x] **Fee Engine**: Pemotongan MDR (Merchant Discount Rate), admin fee, dan bagi hasil mitra
+- [x] **KYC & Onboarding**: Verifikasi dokumen legalitas & aktivasi QRIS
 
 ### Tech Stack yang Sebenarnya Digunakan
 - Bahasa: `[ ] Go  [ ] PHP/Laravel  [ ] Python  [ ] Node.js`
 - Database: `[ ] PostgreSQL  [ ] MySQL  [ ] Redis`
 - Ledger Integrity: `[ ] Double-entry bookkeeping  [ ] ACID Transaction loops  [ ] Periodic reconciliation cron`
 - Integrasi Bank/Disbursement: `[ ] Direct Bank Host-to-Host  [ ] Third-party Payout API (Xendit/Midtrans/dll)`
+linux server, redis, mariadb, php laravel
 
 ### Metrik Kuantitatif Kunci
 - [ ] **Jumlah Merchant yang Dikelola**: `____________________` *(misal: 50,000+ merchant aktif)*
@@ -116,22 +121,23 @@ Jika proyek dikerjakan di bawah NDA:
   - [ ] `LOYALTY SYSTEM`
   - [ ] `REWARDS & LOYALTY ENGINE`
   - [ ] Nama lain: `____________________`
-- [ ] **Periode Waktu**: `2022–2023` (atau: `____________________`)
+- [2021 - 2022] **Periode Waktu**: `2022–2023` (atau: `____________________`)
 
 ### Fitur Utama Sistem
-- [ ] **Points Accrual (Perolehan Poin)**: Event-driven kalkulasi poin otomatis setiap user selesai transaksi
-- [ ] **Tier Status**: Evaluasi kenaikan/penurunan tier user (Silver, Gold, Platinum) berdasarkan spending
-- [ ] **Expiration Engine**: Background worker yang menghanguskan poin kadaluarsa sesuai batching period
-- [ ] **Reward Redemption**: Penukaran poin dengan voucher, pulsa, atau barang fisik dengan jaminan atomic saldo
+- [x] **Points Accrual (Perolehan Poin)**: Event-driven kalkulasi poin otomatis setiap user selesai transaksi
+- [x] **Tier Status**: Evaluasi kenaikan/penurunan tier user (Silver, Gold, Platinum) berdasarkan spending
+- [x] **Expiration Engine**: Background worker yang menghanguskan poin kadaluarsa sesuai batching period
+- [x] **Reward Redemption**: Penukaran poin dengan voucher, pulsa, atau barang fisik dengan jaminan atomic saldo
 
 ### Tech Stack yang Sebenarnya Digunakan
 - Bahasa: `[ ] Go  [ ] PHP/Laravel  [ ] Java  [ ] Python`
 - Database: `[ ] PostgreSQL  [ ] MySQL  [ ] Redis`
 - Message Broker: `[ ] NATS  [ ] RabbitMQ  [ ] Kafka  [ ] Redis Pub/Sub`
+sekitar 2020, loyalty system. point, stamp, coupon, voucher multi principal
 
 ### Metrik Kuantitatif Kunci
 - [ ] **Skala User/Member**: `____________________ active users`
-- [ ] **Akurasi Saldo Poin**: `100% audit log auditability` (immutable point ledger)
+- [x] **Akurasi Saldo Poin**: `100% audit log auditability` (immutable point ledger)
 - [ ] **Kecepatan Ingestion**: `____________________ events/second`
 
 ---
@@ -143,23 +149,24 @@ Jika proyek dikerjakan di bawah NDA:
   - [ ] `ECOMMERCE SYSTEM`
   - [ ] `ECOMMERCE CORE PLATFORM`
   - [ ] Nama lain: `____________________`
-- [ ] **Periode Waktu**: `2022–2023` (atau: `____________________`)
+- [2020 - 2024, termasuk maintenance] **Periode Waktu**: `2022–2023` (atau: `____________________`)
 
 ### Fitur & Arsitektur Utama
-- [ ] **Cart & Catalog**: Manajemen varian produk, harga dinamis, dan keranjang belanja
-- [ ] **Inventory Reservation**: Reservasi stok sementara saat user checkout (mencegah double booking)
-- [ ] **Order State Machine**: Status `CREATED` -> `PAID` -> `PROCESSING` -> `SHIPPED` -> `COMPLETED`
-- [ ] **Payment Orchestration**: Integrasi multi-metode pembayaran (VA, E-Wallet, QRIS, Kartu Kredit)
+- [x] **Cart & Catalog**: Manajemen varian produk, harga dinamis, dan keranjang belanja
+- [x] **Inventory Reservation**: Reservasi stok sementara saat user checkout (mencegah double booking)
+- [x] **Order State Machine**: Status `CREATED` -> `PAID` -> `PROCESSING` -> `SHIPPED` -> `COMPLETED`
+- [x] **Payment Orchestration**: Integrasi multi-metode pembayaran (VA, E-Wallet, QRIS, Kartu Kredit) dengan midtrans
 
 ### Tech Stack yang Sebenarnya Digunakan
 - Bahasa: `[ ] Go  [ ] PHP (Laravel / Lumen)  [ ] Python  [ ] TypeScript`
 - Database: `[ ] PostgreSQL  [ ] MySQL  [ ] Redis`
 - Worker / Background Job: `[ ] Redis Queues  [ ] Celery  [ ] Laravel Queue  [ ] Temporal / Camunda`
+laravel, mariadb, redis, algolia, whatsapp, sms, linux server, gitlab pipeline, supervisor
 
 ### Metrik Kuantitatif Kunci
 - [ ] **Volume Pesanan (Orders)**: `____________________ pesanan / hari`
 - [ ] **Cart-to-Order Conversion Latency**: `[  ] < 100ms  [  ] < 250ms`
-- [ ] **Inventory Consistency**: Zero phantom stock / overselling
+- [x] **Inventory Consistency**: Zero phantom stock / overselling
 
 ---
 
@@ -170,16 +177,17 @@ Jika proyek dikerjakan di bawah NDA:
 - [ ] **Periode Waktu**: `2024` (atau: `____________________`)
 
 ### Fitur Utama
-- [ ] Otomasi pembuatan video pendek (Shorts / Reels / TikTok) dari text prompt / script
-- [ ] Text-to-Speech (TTS) & integrasi voiceover otomatis
-- [ ] Transkripsi subtitle otomatis (Whisper / Speech-to-Text)
-- [ ] Rendering & encoding hardware acceleration via FFmpeg
+- [x] Otomasi pembuatan video pendek (Shorts / Reels / TikTok) dari text prompt / script
+- [x] Text-to-Speech (TTS) & integrasi voiceover otomatis
+- [x] Transkripsi subtitle otomatis (Whisper / Speech-to-Text)
+- [x] Rendering & encoding hardware acceleration via FFmpeg
 
 ### Tech Stack yang Sebenarnya Digunakan
 - Backend & Orchestration: `[ ] Go  [ ] Python  [ ] Node.js`
 - Media Engine: `[ ] FFmpeg  [ ] OpenCV  [ ] Whisper  [ ] Stable Diffusion / Video Models`
 - Queue & Storage: `[ ] Redis / Celery  [ ] S3 / Cloudflare R2  [ ] PostgreSQL`
 - Frontend: `[ ] Next.js / React  [ ] Tailwind CSS`
+python, golang, react-vite, postgresql, whisper, ollama, google ai studio, stable diffusion, ffmpeg, R2, litellm, vidu
 
 ### Metrik Kuantitatif Kunci
 - [ ] **Kecepatan Render**: `____________________ detik per 60s video`

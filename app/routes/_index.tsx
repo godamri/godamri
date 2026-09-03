@@ -17,6 +17,11 @@ export const meta: MetaFunction = () => {
     { property: "og:title", content: `${authorProfile.name} — ${authorProfile.role}` },
     { property: "og:description", content: authorProfile.subheadline },
     { property: "og:type", content: "website" },
+    { property: "og:site_name", content: "Godamri" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:creator", content: authorProfile.handle },
+    { name: "twitter:title", content: `${authorProfile.name} — ${authorProfile.role}` },
+    { name: "twitter:description", content: authorProfile.subheadline },
   ];
 };
 
