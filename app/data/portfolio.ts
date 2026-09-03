@@ -59,7 +59,7 @@ export const selectedWork: Project[] = [
     title: "NEXUS",
     description: "Generative AI video production platform with automated Whisper transcription & FFmpeg encoding pipeline.",
     stack: "Python · Go · PostgreSQL · FFmpeg · Cloudflare R2",
-    period: "2024",
+    period: "2026",
     link: "#",
     external: false,
   },
