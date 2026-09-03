@@ -25,7 +25,7 @@ export const authorProfile = {
   fullName: "Godamri",
   handle: "@godamri",
   role: "Software Engineer & Systems Builder",
-  headline: "I engineer resilient software systems to solve complex business challenges.",
+  headline: "I build scalable, reliable software systems that drive business growth.",
   subheadline:
     "Software, platforms, and automation across fintech, trading, media, AI, and enterprise.",
   aboutQuote:
