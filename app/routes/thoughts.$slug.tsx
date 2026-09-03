@@ -132,14 +132,24 @@ export default function ThoughtDetailPage() {
             <div className="font-mono text-xs uppercase tracking-wider text-cobalt font-semibold mb-1">
               Author
             </div>
-            <h4 className="font-sans text-lg font-bold text-ink">
-              {authorProfile.fullName}
+            <h4 className="font-sans text-lg font-bold text-ink flex items-center gap-2">
+              <span>{authorProfile.fullName}</span>
+              <span className="font-mono text-xs font-normal text-cobalt">{authorProfile.handle}</span>
             </h4>
             <p className="font-sans text-sm text-ink-muted mt-1 max-w-md">
               {authorProfile.role}. Writing on systems architecture, resilience, and software craft.
             </p>
           </div>
-          <div className="flex items-center gap-4 font-mono text-xs">
+          <div className="flex items-center gap-3 font-mono text-xs">
+            <a
+              href={authorProfile.socials.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-600 hover:text-cobalt transition-colors inline-flex items-center gap-1"
+            >
+              GitHub ↗
+            </a>
+            <span className="text-slate-300">·</span>
             <a
               href={authorProfile.socials.linkedin}
               target="_blank"
@@ -150,12 +160,12 @@ export default function ThoughtDetailPage() {
             </a>
             <span className="text-slate-300">·</span>
             <a
-              href={authorProfile.socials.github}
+              href={authorProfile.socials.twitter}
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-600 hover:text-cobalt transition-colors inline-flex items-center gap-1"
             >
-              GitHub ↗
+              X ↗
             </a>
           </div>
         </div>

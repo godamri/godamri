@@ -203,7 +203,20 @@ export default function IndexPage() {
               className="group font-sans text-base font-medium text-ink hover:text-cobalt transition-colors duration-200 inline-flex items-center gap-1.5 py-1"
             >
               <span className="border-b border-transparent group-hover:border-cobalt transition-colors duration-200">
-                GitHub
+                GitHub ({authorProfile.handle})
+              </span>
+              <span className="font-mono text-xs text-cobalt transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                ↗
+              </span>
+            </a>
+            <a
+              href={authorProfile.socials.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group font-sans text-base font-medium text-ink hover:text-cobalt transition-colors duration-200 inline-flex items-center gap-1.5 py-1"
+            >
+              <span className="border-b border-transparent group-hover:border-cobalt transition-colors duration-200">
+                X ({authorProfile.handle})
               </span>
               <span className="font-mono text-xs text-cobalt transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                 ↗

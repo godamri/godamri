@@ -23,6 +23,7 @@ export interface ToolCategory {
 export const authorProfile = {
   name: "GODAMRI",
   fullName: "Godamri",
+  handle: "@godamri",
   role: "Software Engineer & Systems Builder",
   headline: "I build software that solves messy problems.",
   subheadline:
@@ -35,7 +36,8 @@ export const authorProfile = {
   ],
   socials: {
     github: "https://github.com/godamri",
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/in/godamri",
+    twitter: "https://x.com/godamri",
     email: "mailto:contact@godamri.com",
   },
 };
