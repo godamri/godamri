@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Gee — Software Engineer &amp; Systems Builder</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        canvas: '#FAF9F5',
+                        ink: '#111113',
+                        'ink-muted': '#5E5D64',
+                        'ink-light': '#8E8D94',
+                        hairline: '#E7E5DF',
+                        'hairline-subtle': '#EFECE6',
+                        cobalt: '#0047FF',
+                        'cobalt-hover': '#0038CC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    },
+                    letterSpacing: {
+                        tighter: '-0.04em',
+                        tightest: '-0.06em'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAF9F5;
+            color: #111113;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::selection {
+            background-color: #0047FF;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body class="bg-canvas text-ink font-sans antialiased selection:bg-cobalt selection:text-white"
+    style="background-color: rgb(248, 250, 252); color: rgb(15, 23, 42); text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased;">
+    <!-- Header -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-[#F8FAFC]/90 backdrop-blur-md border-b border-[#E2E8F0] transition-colors">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
+            <a class="font-sans font-semibold tracking-tight text-lg text-ink hover:text-cobalt transition-colors duration-200"
+                href="#">
+                GEE
+            </a>
+            <nav class="flex items-center gap-6 sm:gap-10 text-[13px] tracking-[0.14em] uppercase font-medium"><a
+                    class="text-[#64748B] hover:text-[#2563EB] transition-colors duration-200" href="#work">WORK</a>
+                <a class="text-[#64748B] hover:text-[#2563EB] transition-colors duration-200" href="#about">ABOUT</a>
+                <a class="text-[#64748B] hover:text-[#2563EB] transition-colors duration-200"
+                    href="#contact">CONTACT</a>
+                <a class="hidden sm:inline-flex items-center gap-1 text-[#0F172A] hover:text-[#2563EB] transition-colors duration-200 group"
+                    href="https://www.linkedin.com" rel="noopener noreferrer" target="_blank">
+                    <span class="">LINKEDIN</span>
+                    <span
+                        class="font-mono text-xs transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-[#2563EB]">↗</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main class="w-full pt-20 sm:pt-24">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+            <!-- Hero Section: Asymmetric 2-column editorial composition -->
+            <section class="pt-16 sm:pt-24 pb-20 sm:pb-28 border-b border-[#E2E8F0]">
+                <div class="max-w-4xl pt-8 pb-12 sm:pt-14 sm:pb-20">
+                    <div
+                        class="inline-flex items-center gap-2 px-2.5 py-1 rounded border border-[#BFDBFE]/60 bg-[#EFF6FF] text-[11px] font-mono uppercase tracking-[0.2em] text-[#2563EB] mb-8 sm:mb-10 font-medium">
+                        Software Engineer &amp; Systems Builder
+                    </div>
+                    <h1
+                        class="font-sans font-semibold text-[46px] sm:text-[68px] lg:text-[76px] leading-[1.04] tracking-[-0.035em] text-[#0F172A] max-w-3xl">
+                        I build software that solves messy problems.
+                    </h1>
+                    <p
+                        class="font-sans text-lg sm:text-xl text-[#475569] leading-relaxed mt-8 sm:mt-10 max-w-xl font-normal">
+                        Software, platforms, and automation across fintech, trading, media, AI, and enterprise.
+                    </p>
+                    <div class="mt-10 sm:mt-12 flex flex-wrap items-center gap-6 sm:gap-8 pt-2">
+                        <a class="inline-flex items-center justify-center bg-[#0F172A] text-white text-[13px] font-medium px-6 py-3.5 rounded-full hover:bg-[#2563EB] transition-colors duration-200 tracking-tight shadow-sm hover:shadow-blue-500/10"
+                            href="#work">
+                            View selected work →
+                        </a>
+                        <a class="group text-[13px] font-medium text-[#475569] hover:text-[#2563EB] transition-colors duration-200 inline-flex items-center gap-1.5 py-2"
+                            href="https://www.linkedin.com" rel="noopener noreferrer" target="_blank">
+                            <span class="">LinkedIn</span>
+                            <span
+                                class="font-mono text-xs transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-[#2563EB]">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- Selected Work Section ("SELECTED WORK") -->
+            <section class="py-20 sm:py-24 border-b border-[#E2E8F0]" id="work">
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-10 sm:mb-12">
+                    <div class="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] font-normal">
+                        <span class="text-[#2563EB] font-medium">01 /</span>
+                        <span class="text-[#475569]">SELECTED WORK</span>
+                    </div>
+                    <span
+                        class="hidden sm:inline font-mono text-xs text-[#2563EB] tracking-wider px-2 py-0.5 rounded bg-[#EFF6FF] border border-[#DBEAFE]">04
+                        ENTRIES</span>
+                </div>
+                <div class="divide-y divide-[#E2E8F0] border-t border-b border-[#E2E8F0]"><!-- Row: HELIX -->
+                    <a class="group relative block py-9 sm:py-10 transition-colors duration-200 hover:bg-[#F1F5F9]/60 -mx-4 px-4 sm:-mx-6 sm:px-6"
+                        href="#">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 items-baseline">
+                            <div class="md:col-span-4 flex items-baseline gap-4">
+                                <span
+                                    class="font-mono text-xs text-[#2563EB]/70 group-hover:text-[#2563EB] font-medium transition-colors duration-200">01</span>
+                                <h3
+                                    class="font-sans text-2xl sm:text-[28px] font-medium tracking-tight text-[#0F172A] group-hover:text-[#2563EB] group-hover:translate-x-1 transition-all duration-200">
+                                    HELIX
+                                </h3>
+                            </div>
+                            <div class="md:col-span-5">
+                                <p
+                                    class="font-sans text-[15px] sm:text-base text-[#475569] group-hover:text-[#0F172A] transition-colors duration-200">
+                                    Trading &amp; execution system.
+                                </p>
+                                <div class="mt-2 font-mono text-xs text-[#64748B] tracking-normal">
+                                    Rust · Python · PostgreSQL · Redis
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 font-mono text-xs text-[#64748B] md:text-right">
+                                2024–Present
+                            </div>
+                            <div
+                                class="md:col-span-1 text-right font-mono text-base text-[#94A3B8] group-hover:text-[#2563EB] transition-all duration-200 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                                ↗
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Row: NEXUS -->
+                    <a class="group relative block py-9 sm:py-10 transition-colors duration-200 hover:bg-[#F1F5F9]/60 -mx-4 px-4 sm:-mx-6 sm:px-6"
+                        href="#">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 items-baseline">
+                            <div class="md:col-span-4 flex items-baseline gap-4">
+                                <span
+                                    class="font-mono text-xs text-[#2563EB]/70 group-hover:text-[#2563EB] font-medium transition-colors duration-200">02</span>
+                                <h3
+                                    class="font-sans text-2xl sm:text-[28px] font-medium tracking-tight text-[#0F172A] group-hover:text-[#2563EB] group-hover:translate-x-1 transition-all duration-200">
+                                    NEXUS
+                                </h3>
+                            </div>
+                            <div class="md:col-span-5">
+                                <p
+                                    class="font-sans text-[15px] sm:text-base text-[#475569] group-hover:text-[#0F172A] transition-colors duration-200">
+                                    AI video generation and media production platform.
+                                </p>
+                                <div class="mt-2 font-mono text-xs text-[#64748B] tracking-normal">
+                                    Go · Python · Next.js
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 font-mono text-xs text-[#64748B] md:text-right">
+                                2024
+                            </div>
+                            <div
+                                class="md:col-span-1 text-right font-mono text-base text-[#94A3B8] group-hover:text-[#2563EB] transition-all duration-200 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                                ↗
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Row: POWERCLIP -->
+                    <a class="group relative block py-9 sm:py-10 transition-colors duration-200 hover:bg-[#F1F5F9]/60 -mx-4 px-4 sm:-mx-6 sm:px-6"
+                        href="#">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 items-baseline">
+                            <div class="md:col-span-4 flex items-baseline gap-4">
+                                <span
+                                    class="font-mono text-xs text-[#2563EB]/70 group-hover:text-[#2563EB] font-medium transition-colors duration-200">03</span>
+                                <h3
+                                    class="font-sans text-2xl sm:text-[28px] font-medium tracking-tight text-[#0F172A] group-hover:text-[#2563EB] group-hover:translate-x-1 transition-all duration-200">
+                                    POWERCLIP
+                                </h3>
+                            </div>
+                            <div class="md:col-span-5">
+                                <p
+                                    class="font-sans text-[15px] sm:text-base text-[#475569] group-hover:text-[#0F172A] transition-colors duration-200">
+                                    Automated video processing and short-form content platform.
+                                </p>
+                                <div class="mt-2 font-mono text-xs text-[#64748B] tracking-normal">
+                                    Python · FFmpeg · Redis · PostgreSQL
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 font-mono text-xs text-[#64748B] md:text-right">
+                                2023
+                            </div>
+                            <div
+                                class="md:col-span-1 text-right font-mono text-base text-[#94A3B8] group-hover:text-[#2563EB] transition-all duration-200 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                                ↗
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Row: DIGITAL SELF -->
+                    <a class="group relative block py-9 sm:py-10 transition-colors duration-200 hover:bg-[#F1F5F9]/60 -mx-4 px-4 sm:-mx-6 sm:px-6"
+                        href="#">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 items-baseline">
+                            <div class="md:col-span-4 flex items-baseline gap-4">
+                                <span
+                                    class="font-mono text-xs text-[#2563EB]/70 group-hover:text-[#2563EB] font-medium transition-colors duration-200">04</span>
+                                <h3
+                                    class="font-sans text-2xl sm:text-[28px] font-medium tracking-tight text-[#0F172A] group-hover:text-[#2563EB] group-hover:translate-x-1 transition-all duration-200">
+                                    DIGITAL SELF
+                                </h3>
+                            </div>
+                            <div class="md:col-span-5">
+                                <p
+                                    class="font-sans text-[15px] sm:text-base text-[#475569] group-hover:text-[#0F172A] transition-colors duration-200">
+                                    Personal intelligence and knowledge system.
+                                </p>
+                                <div class="mt-2 font-mono text-xs text-[#64748B] tracking-normal">
+                                    Go · Python · Next.js · PostgreSQL
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 font-mono text-xs text-[#64748B] md:text-right">
+                                2023
+                            </div>
+                            <div
+                                class="md:col-span-1 text-right font-mono text-base text-[#94A3B8] group-hover:text-[#2563EB] transition-all duration-200 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                                ↗
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <!-- Experience / Domains Section ("WHERE I WORK") -->
+            <section class="py-20 sm:py-24 border-b border-[#E2E8F0]">
+                <header
+                    class="fixed top-0 left-0 right-0 z-50 bg-[#F8FAFC]/90 backdrop-blur-md border-b border-[#E2E8F0] transition-colors">
+                    <div class="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] font-normal">
+                        <span class="text-[#2563EB] font-medium">02 /</span>
+                        <span class="text-[#475569]">WHERE I WORK</span>
+                    </div>
+                </header>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12"><!-- 01 FINTECH -->
+                    <div
+                        class="md:col-span-6 lg:col-span-4 pt-4 border-t border-[#E2E8F0] flex flex-col justify-between group">
+                        <div>
+                            <div class="font-mono text-xs text-[#2563EB] tracking-wider mb-2.5 font-medium">01</div>
+                            <h3
+                                class="font-sans text-lg font-medium text-[#0F172A] tracking-tight group-hover:text-[#2563EB] transition-colors duration-200">
+                                Fintech</h3>
+                            <p class="font-sans text-sm text-[#475569] mt-2 leading-relaxed">
+                                Payments · QRIS · PPOB · Transaction Systems
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 02 TRADING -->
+                    <div
+                        class="md:col-span-6 lg:col-span-4 pt-4 border-t border-[#E2E8F0] flex flex-col justify-between group">
+                        <div>
+                            <div class="font-mono text-xs text-[#2563EB] tracking-wider mb-2.5 font-medium">02</div>
+                            <h3
+                                class="font-sans text-lg font-medium text-[#0F172A] tracking-tight group-hover:text-[#2563EB] transition-colors duration-200">
+                                Trading</h3>
+                            <p class="font-sans text-sm text-[#475569] mt-2 leading-relaxed">
+                                Execution · Market Systems · Risk · Telemetry
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 03 MEDIA -->
+                    <div
+                        class="md:col-span-6 lg:col-span-4 pt-4 border-t border-[#E2E8F0] flex flex-col justify-between group">
+                        <div>
+                            <div class="font-mono text-xs text-[#2563EB] tracking-wider mb-2.5 font-medium">03</div>
+                            <h3
+                                class="font-sans text-lg font-medium text-[#0F172A] tracking-tight group-hover:text-[#2563EB] transition-colors duration-200">
+                                Media</h3>
+                            <p class="font-sans text-sm text-[#475569] mt-2 leading-relaxed">
+                                Video Processing · Content Automation
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 04 AI -->
+                    <div
+                        class="md:col-span-6 lg:col-span-4 pt-4 border-t border-[#E2E8F0] flex flex-col justify-between group">
+                        <div>
+                            <div class="font-mono text-xs text-[#2563EB] tracking-wider mb-2.5 font-medium">04</div>
+                            <h3
+                                class="font-sans text-lg font-medium text-[#0F172A] tracking-tight group-hover:text-[#2563EB] transition-colors duration-200">
+                                AI</h3>
+                            <p class="font-sans text-sm text-[#475569] mt-2 leading-relaxed">
+                                Generative Media · AI Workflows · Knowledge Systems
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 05 ENTERPRISE -->
+                    <div
+                        class="md:col-span-6 lg:col-span-4 pt-4 border-t border-[#E2E8F0] flex flex-col justify-between group">
+                        <div>
+                            <div class="font-mono text-xs text-[#2563EB] tracking-wider mb-2.5 font-medium">05</div>
+                            <h3
+                                class="font-sans text-lg font-medium text-[#0F172A] tracking-tight group-hover:text-[#2563EB] transition-colors duration-200">
+                                Enterprise</h3>
+                            <p class="font-sans text-sm text-[#475569] mt-2 leading-relaxed">
+                                Internal Systems · QA · IT Operations
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Technology Section ("TOOLS I WORK WITH") -->
+            <section class="py-20 sm:py-24 border-b border-[#E2E8F0]">
+                <header
+                    class="fixed top-0 left-0 right-0 z-50 bg-[#F8FAFC]/90 backdrop-blur-md border-b border-[#E2E8F0] transition-colors">
+                    <div class="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] font-normal">
+                        <span class="text-[#2563EB] font-medium">03 /</span>
+                        <span class="text-[#475569]">TOOLS I WORK WITH</span>
+                    </div>
+                </header>
+                <div class="divide-y divide-[#E2E8F0] border-t border-b border-[#E2E8F0]"><!-- Row: Languages -->
+                    <div class="py-5 sm:py-6 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 items-baseline">
+                        <div class="md:col-span-4 font-mono text-xs uppercase tracking-wider text-[#64748B]">
+                            Languages
+                        </div>
+                        <div
+                            class="md:col-span-8 font-sans text-sm sm:text-[15px] font-medium text-[#0F172A] tracking-tight">
+                            Go · PHP · Python · TypeScript
+                        </div>
+                    </div>
+                    <!-- Row: Frameworks -->
+                    <div class="py-5 sm:py-6 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 items-baseline">
+                        <div class="md:col-span-4 font-mono text-xs uppercase tracking-wider text-[#64748B]">
+                            Frameworks
+                        </div>
+                        <div
+                            class="md:col-span-8 font-sans text-sm sm:text-[15px] font-medium text-[#0F172A] tracking-tight">
+                            Laravel · Next.js · FastAPI
+                        </div>
+                    </div>
+                    <!-- Row: Data & Messaging -->
+                    <div class="py-5 sm:py-6 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 items-baseline">
+                        <div class="md:col-span-4 font-mono text-xs uppercase tracking-wider text-[#64748B]">
+                            Data &amp; Messaging
+                        </div>
+                        <div
+                            class="md:col-span-8 font-sans text-sm sm:text-[15px] font-medium text-[#0F172A] tracking-tight">
+                            PostgreSQL · Redis · NATS · Redpanda · pgvector
+                        </div>
+                    </div>
+                    <!-- Row: Infrastructure -->
+                    <div class="py-5 sm:py-6 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 items-baseline">
+                        <div class="md:col-span-4 font-mono text-xs uppercase tracking-wider text-[#64748B]">
+                            Infrastructure
+                        </div>
+                        <div
+                            class="md:col-span-8 font-sans text-sm sm:text-[15px] font-medium text-[#0F172A] tracking-tight">
+                            Docker · Linux · CI/CD
+                        </div>
+                    </div>
+                    <!-- Row: Engineering -->
+                    <div class="py-5 sm:py-6 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 items-baseline">
+                        <div class="md:col-span-4 font-mono text-xs uppercase tracking-wider text-[#64748B]">
+                            Engineering
+                        </div>
+                        <div
+                            class="md:col-span-8 font-sans text-sm sm:text-[15px] font-medium text-[#0F172A] tracking-tight">
+                            Distributed Systems · Automation · Reliability · Observability
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About Section -->
+            <section class="py-20 sm:py-28 border-b border-[#E2E8F0]" id="about">
+                <header
+                    class="fixed top-0 left-0 right-0 z-50 bg-[#F8FAFC]/90 backdrop-blur-md border-b border-[#E2E8F0] transition-colors">
+                    <div class="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] font-normal">
+                        <span class="text-[#2563EB] font-medium">04 /</span>
+                        <span class="text-[#475569]">ABOUT</span>
+                    </div>
+                </header>
+                <div class="max-w-3xl">
+                    <h3
+                        class="font-sans font-medium text-2xl sm:text-[34px] leading-[1.25] tracking-tight text-ink mb-10 sm:mb-12">
+                        “I like turning complicated technical problems into systems that are easier to understand,
+                        operate, and maintain.”
+                    </h3>
+                    <div class="space-y-6 font-sans text-base sm:text-lg text-ink-muted leading-relaxed font-normal">
+                        <p class="">
+                            I'm a software engineer with a background in backend development, quality engineering,
+                            systems, and IT operations.
+                        </p>
+                        <p class="">
+                            I've worked across payment systems, trading infrastructure, media automation, AI systems,
+                            and internal enterprise platforms.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Section ("Let's build something useful.") -->
+            <section class="py-20 sm:py-28" id="contact">
+                <header
+                    class="fixed top-0 left-0 right-0 z-50 bg-[#F8FAFC]/90 backdrop-blur-md border-b border-[#E2E8F0] transition-colors">
+                    <div class="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] font-normal">
+                        <span class="text-[#2563EB] font-medium">05 /</span>
+                        <span class="text-[#475569]">CONTACT</span>
+                    </div>
+                </header>
+                <div class="max-w-2xl">
+                    <h3
+                        class="font-sans font-semibold text-3xl sm:text-5xl lg:text-6xl tracking-tight text-[#0F172A] leading-tight">
+                        Let's build something useful.
+                    </h3>
+                    <p class="font-sans text-base sm:text-lg text-[#475569] mt-5 leading-relaxed font-normal">
+                        For engineering roles, architecture work, projects, or just a good technical conversation.
+                    </p>
+                    <div
+                        class="mt-10 sm:mt-12 flex flex-wrap items-center gap-8 sm:gap-12 pt-6 border-t border-[#E2E8F0]">
+                        <a class="group font-sans text-base font-medium text-[#0F172A] hover:text-[#2563EB] transition-colors duration-200 inline-flex items-center gap-1.5 py-1"
+                            href="https://www.linkedin.com" rel="noopener noreferrer" target="_blank">
+                            <span
+                                class="border-b border-transparent group-hover:border-[#2563EB] transition-colors duration-200">LinkedIn</span>
+                            <span
+                                class="font-mono text-xs text-[#2563EB] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+                        </a>
+                        <a class="group font-sans text-base font-medium text-[#0F172A] hover:text-[#2563EB] transition-colors duration-200 inline-flex items-center gap-1.5 py-1"
+                            href="https://github.com" rel="noopener noreferrer" target="_blank">
+                            <span
+                                class="border-b border-transparent group-hover:border-[#2563EB] transition-colors duration-200">GitHub</span>
+                            <span
+                                class="font-mono text-xs text-[#2563EB] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+                        </a>
+                        <a class="group font-sans text-base font-medium text-[#0F172A] hover:text-[#2563EB] transition-colors duration-200 inline-flex items-center gap-1.5 py-1"
+                            href="mailto:contact@gee.engineer">
+                            <span
+                                class="border-b border-transparent group-hover:border-[#2563EB] transition-colors duration-200">Email</span>
+                            <span
+                                class="font-mono text-xs text-[#2563EB] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full bg-[#F8FAFC] border-t border-[#E2E8F0] py-10">
+        <div
+            class="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-[11px] sm:text-xs text-ink-light tracking-normal">
+            <div class="">
+                GEE — SOFTWARE ENGINEER
+            </div>
+            <div class="flex items-center gap-4 text-ink-muted"><a
+                    class="hover:text-[#2563EB] transition-colors duration-200" href="https://www.linkedin.com"
+                    rel="noopener noreferrer" target="_blank">LinkedIn</a>
+                <span class="">·</span>
+                <a class="hover:text-[#2563EB] transition-colors duration-200" href="https://github.com"
+                    rel="noopener noreferrer" target="_blank">GitHub</a>
+                <span class="">·</span>
+                <a class="hover:text-[#2563EB] transition-colors duration-200"
+                    href="mailto:contact@gee.engineer">Email</a>
+            </div>
+            <div class="">
+                © 2026
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

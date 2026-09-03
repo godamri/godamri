@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gee — Software Engineer</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#f8fafc",
+                        surface: "#f8fafc",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#ffffff",
+                        "surface-container": "#f1f5f9",
+                        "surface-container-high": "#e2e8f0",
+                        "surface-container-highest": "#cbd5e1",
+                        "surface-variant": "#f1f5f9",
+                        "on-surface": "#0f172a",
+                        "on-surface-variant": "#475569",
+                        "outline": "#94a3b8",
+                        "outline-variant": "#e2e8f0",
+                        primary: "#0f172a",
+                        "on-primary": "#ffffff",
+                        secondary: "#2563eb",
+                        "secondary-hover": "#1d4ed8",
+                        "on-secondary": "#ffffff"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "unit-32": "8rem",
+                        "unit-24": "6rem",
+                        "unit-16": "4rem",
+                        "unit-12": "3rem",
+                        "unit-8": "2rem",
+                        "unit-6": "1.5rem",
+                        "unit-4": "1rem",
+                        "unit-3": "0.75rem",
+                        "unit-2": "0.5rem",
+                        "unit-1": "0.25rem",
+                        "container-max": "1150px",
+                        "gutter-desktop": "2.5rem",
+                        "gutter-mobile": "1.25rem"
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "headline-sm": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        subheading: ["Inter", "sans-serif"],
+                        "mono-tag": ["'JetBrains Mono'", "monospace"],
+                        "mono-code": ["'JetBrains Mono'", "monospace"]
+                    },
+                    fontSize: {
+                        display: ["3.5rem", { lineHeight: "4rem", letterSpacing: "-0.03em", fontWeight: "600" }],
+                        "headline-lg": ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-md": ["1.5rem", { lineHeight: "2rem", letterSpacing: "-0.015em", fontWeight: "600" }],
+                        "headline-sm": ["1.125rem", { lineHeight: "1.625rem", letterSpacing: "-0.01em", fontWeight: "600" }],
+                        "body-lg": ["1.125rem", { lineHeight: "1.875rem", letterSpacing: "-0.01em", fontWeight: "400" }],
+                        "body-md": ["1rem", { lineHeight: "1.625rem", letterSpacing: "-0.005em", fontWeight: "400" }],
+                        "body-sm": ["0.875rem", { lineHeight: "1.375rem", letterSpacing: "0", fontWeight: "400" }],
+                        subheading: ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.08em", fontWeight: "600" }],
+                        "mono-tag": ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.02em", fontWeight: "400" }],
+                        "mono-code": ["0.875rem", { lineHeight: "1.5rem", letterSpacing: "0", fontWeight: "400" }]
+                    }
+                }
+            }
+        };</script>
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main> :first-child {
+                margin-top: 0 !important;
+            }
+
+            main> :last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-secondary selection:text-white">
+    <header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-slate-200">
+        <div
+            class="h-16 max-w-[1150px] mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between">
+            <a class="font-headline-sm text-headline-sm font-semibold tracking-tight text-slate-900 transition-opacity hover:opacity-75"
+                data-path="work" href="#">GEE</a>
+            <nav class="flex items-center gap-unit-6" data-active-classes="text-slate-900 font-semibold"><a
+                    aria-current="page"
+                    class="font-subheading text-subheading uppercase tracking-widest text-slate-900 font-semibold transition-colors"
+                    data-path="work" href="#">WORK</a><a
+                    class="font-subheading text-subheading uppercase tracking-widest text-slate-500 hover:text-slate-900 transition-colors font-medium"
+                    data-path="about" href="#">ABOUT</a><a
+                    class="font-subheading text-subheading uppercase tracking-widest text-slate-500 hover:text-slate-900 transition-colors font-medium"
+                    data-path="contact" href="#">CONTACT</a><a
+                    class="font-subheading text-subheading uppercase tracking-widest text-slate-500 hover:text-slate-900 transition-colors inline-flex items-center gap-unit-1 font-medium"
+                    href="https://www.linkedin.com" rel="noopener noreferrer" target="_blank">LINKEDIN <span
+                        class="text-[11px] leading-none font-mono-tag text-slate-400">↗</span></a></nav>
+        </div>
+    </header>
+    <main class="w-full pt-16 bg-background">
+        <div class="max-w-[1150px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+            <div class="flex flex-col w-full">
+                <!-- Section: Header / Hero Intro -->
+                <section class="w-full pt-unit-12 pb-unit-12">
+                    <div class="flex flex-col gap-unit-6 max-w-[850px]">
+                        <div class="flex items-center gap-unit-3">
+                            <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                            <p class="font-mono-tag text-mono-tag text-slate-500 uppercase tracking-widest font-medium">
+                                Writing &amp; Field Notes / Systems</p>
+                        </div>
+                        <h1 class="font-display text-display text-slate-900 font-bold tracking-tight">
+                            Thoughts on engineering, systems architecture, and craft.
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-slate-600 max-w-[68ch]">
+                            Reflections and technical essays about building software, managing complexity, and scaling
+                            distributed systems with quiet efficiency.
+                        </p>
+                    </div>
+                    <!-- Category Filter Controls -->
+                    <div class="mt-unit-12 flex flex-wrap items-center gap-unit-2" id="filter-container">
+                        <button
+                            class="filter-btn font-mono-tag text-mono-tag px-3.5 py-1.5 rounded bg-slate-900 text-white font-medium shadow-sm transition-all cursor-pointer"
+                            data-filter="all">
+                            All (6)
+                        </button>
+                        <button
+                            class="filter-btn font-mono-tag text-mono-tag px-3.5 py-1.5 rounded bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300 hover:bg-slate-50 transition-all cursor-pointer font-medium"
+                            data-filter="systems">
+                            Systems &amp; Architecture
+                        </button>
+                        <button
+                            class="filter-btn font-mono-tag text-mono-tag px-3.5 py-1.5 rounded bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300 hover:bg-slate-50 transition-all cursor-pointer font-medium"
+                            data-filter="infra">
+                            Backend &amp; Infra
+                        </button>
+                        <button
+                            class="filter-btn font-mono-tag text-mono-tag px-3.5 py-1.5 rounded bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300 hover:bg-slate-50 transition-all cursor-pointer font-medium"
+                            data-filter="fintech">
+                            Fintech
+                        </button>
+                        <button
+                            class="filter-btn font-mono-tag text-mono-tag px-3.5 py-1.5 rounded bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300 hover:bg-slate-50 transition-all cursor-pointer font-medium"
+                            data-filter="observability">
+                            Observability
+                        </button>
+                    </div>
+                </section>
+                <!-- Section: Featured Editorial Highlight -->
+                <section class="w-full mb-unit-16" data-category="systems">
+                    <div
+                        class="bg-white border border-slate-200 shadow-sm rounded-lg p-unit-8 md:p-unit-12 transition-all hover:border-slate-300">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-8 items-start">
+                            <div class="lg:col-span-8 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center gap-unit-4 mb-unit-4">
+                                        <span
+                                            class="font-mono-tag text-mono-tag text-blue-600 font-semibold tracking-wide">SYSTEMS
+                                            ARCHITECTURE</span>
+                                        <span class="text-slate-300 font-mono-tag text-mono-tag">•</span>
+                                        <span class="font-mono-tag text-mono-tag text-slate-500">March 2025</span>
+                                        <span class="text-slate-300 font-mono-tag text-mono-tag">•</span>
+                                        <span class="font-mono-tag text-mono-tag text-slate-500">8 min read</span>
+                                    </div>
+                                    <a class="group inline-block" href="#">
+                                        <h2
+                                            class="font-headline-lg text-headline-lg text-slate-900 font-bold group-hover:text-blue-600 transition-colors mb-unit-4">
+                                            The Architecture of Simplicity: Why Less Code Scales Better
+                                        </h2>
+                                    </a>
+                                    <p
+                                        class="font-body-md text-body-md text-slate-600 leading-relaxed max-w-[65ch] mb-unit-8">
+                                        Most engineering problems aren’t solved by introducing novel abstractions, but
+                                        by ruthlessly removing unnecessary layers. An operational post-mortem on
+                                        simplifying our event streaming pipeline while cutting end-to-end latency by
+                                        54%.
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-unit-6">
+                                    <a class="inline-flex items-center gap-unit-2 font-subheading text-subheading uppercase tracking-widest text-slate-900 hover:text-blue-600 transition-colors group"
+                                        href="#">
+                                        Read Deep Dive
+                                        <span
+                                            class="material-symbols-outlined text-base transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </a>
+                                    <span
+                                        class="font-mono-tag text-mono-tag text-slate-600 bg-slate-100 border border-slate-200/80 px-unit-2 py-0.5 rounded">p99
+                                        Latency: -54%</span>
+                                </div>
+                            </div>
+                            <!-- Architectural Metrics Display -->
+                            <div
+                                class="lg:col-span-4 bg-slate-50 border border-slate-200/80 rounded p-unit-6 flex flex-col justify-between h-full">
+                                <div class="flex items-center justify-between mb-unit-4">
+                                    <span
+                                        class="font-mono-tag text-mono-tag text-slate-500 uppercase font-medium">Stream
+                                        Topology</span>
+                                    <span class="material-symbols-outlined text-slate-400 text-sm">hub</span>
+                                </div>
+                                <!-- Inline Technical Graphic -->
+                                <div class="w-full my-unit-2">
+                                    <svg class="w-full h-24 text-slate-900" fill="none" viewbox="0 0 280 80">
+                                        <path d="M 10 40 L 70 40" stroke="#94a3b8" stroke-dasharray="3 3"
+                                            stroke-width="1.5"></path>
+                                        <rect fill="#f1f5f9" height="36" rx="2" stroke="#64748b" stroke-width="1.2"
+                                            width="48" x="70" y="22"></rect>
+                                        <text fill="#334155" font-family="'JetBrains Mono', monospace" font-size="9"
+                                            font-weight="500" text-anchor="middle" x="94" y="44">QUEUE</text>
+                                        <path d="M 118 40 L 168 40" stroke="#0f172a" stroke-width="1.5"></path>
+                                        <rect fill="#0f172a" height="48" rx="2" width="60" x="168" y="16"></rect>
+                                        <text fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9"
+                                            font-weight="500" text-anchor="middle" x="198" y="42">WORKER</text>
+                                        <path d="M 228 40 L 270 40" stroke="#2563eb" stroke-width="2"></path>
+                                        <circle cx="270" cy="40" fill="#2563eb" r="4"></circle>
+                                    </svg>
+                                </div>
+                                <div
+                                    class="pt-unit-3 flex items-center justify-between font-mono-tag text-mono-tag text-slate-500 border-t border-slate-200">
+                                    <span>Removed 4 microservices</span>
+                                    <span class="text-blue-600 font-semibold">Stable</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Main Essay Index -->
+                <section class="w-full mb-unit-24">
+                    <div class="flex items-baseline justify-between mb-unit-6 border-b border-slate-200 pb-unit-3">
+                        <h3
+                            class="font-subheading text-subheading uppercase tracking-widest text-slate-500 font-semibold">
+                            Index / Chronological</h3>
+                        <span class="font-mono-tag text-mono-tag text-slate-400" id="article-count">Showing 5
+                            essays</span>
+                    </div>
+                    <!-- Articles List Container -->
+                    <div class="flex flex-col divide-y divide-slate-100" id="essay-list">
+                        <!-- Article 1 -->
+                        <article
+                            class="essay-item p-unit-6 rounded bg-transparent hover:bg-white hover:shadow-sm border border-transparent hover:border-slate-200 transition-all duration-150"
+                            data-category="infra">
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-unit-4 md:gap-unit-6 items-baseline">
+                                <div
+                                    class="md:col-span-2 font-mono-tag text-mono-tag text-slate-400 flex items-center gap-unit-2">
+                                    <span>Feb 2025</span>
+                                    <span class="text-slate-300 md:hidden">•</span>
+                                    <span class="md:hidden text-blue-600 font-medium">BACKEND &amp; INFRA</span>
+                                </div>
+                                <div class="md:col-span-7 flex flex-col gap-unit-1">
+                                    <a class="group inline-block" href="#">
+                                        <h4
+                                            class="font-headline-sm text-headline-sm text-slate-900 group-hover:text-blue-600 transition-colors font-semibold">
+                                            Why We Chose Go and Python for Our Media Pipeline
+                                        </h4>
+                                    </a>
+                                    <p class="font-body-sm text-body-sm text-slate-600 max-w-[62ch]">
+                                        Balancing high-throughput network concurrency with rapid AI model integration
+                                        without overcomplicating deployment topologies.
+                                    </p>
+                                </div>
+                                <div
+                                    class="md:col-span-3 flex md:flex-col md:items-end justify-between items-center gap-unit-1 font-mono-tag text-mono-tag">
+                                    <span
+                                        class="hidden md:inline-block text-blue-600 font-medium uppercase tracking-wide">BACKEND
+                                        &amp; INFRA</span>
+                                    <span class="text-slate-400">6 min read</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Article 2 -->
+                        <article
+                            class="essay-item p-unit-6 rounded bg-transparent hover:bg-white hover:shadow-sm border border-transparent hover:border-slate-200 transition-all duration-150"
+                            data-category="fintech">
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-unit-4 md:gap-unit-6 items-baseline">
+                                <div
+                                    class="md:col-span-2 font-mono-tag text-mono-tag text-slate-400 flex items-center gap-unit-2">
+                                    <span>Jan 2025</span>
+                                    <span class="text-slate-300 md:hidden">•</span>
+                                    <span class="md:hidden text-blue-600 font-medium">FINTECH</span>
+                                </div>
+                                <div class="md:col-span-7 flex flex-col gap-unit-1">
+                                    <a class="group inline-block" href="#">
+                                        <h4
+                                            class="font-headline-sm text-headline-sm text-slate-900 group-hover:text-blue-600 transition-colors font-semibold">
+                                            Designing Payment Systems for Failure
+                                        </h4>
+                                    </a>
+                                    <p class="font-body-sm text-body-sm text-slate-600 max-w-[62ch]">
+                                        Idempotency keys, reconciliation loops, and surviving third-party gateway
+                                        timeouts in high-volume QRIS transaction flows.
+                                    </p>
+                                </div>
+                                <div
+                                    class="md:col-span-3 flex md:flex-col md:items-end justify-between items-center gap-unit-1 font-mono-tag text-mono-tag">
+                                    <span
+                                        class="hidden md:inline-block text-blue-600 font-medium uppercase tracking-wide">FINTECH</span>
+                                    <span class="text-slate-400">11 min read</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Article 3 -->
+                        <article
+                            class="essay-item p-unit-6 rounded bg-transparent hover:bg-white hover:shadow-sm border border-transparent hover:border-slate-200 transition-all duration-150"
+                            data-category="systems">
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-unit-4 md:gap-unit-6 items-baseline">
+                                <div
+                                    class="md:col-span-2 font-mono-tag text-mono-tag text-slate-400 flex items-center gap-unit-2">
+                                    <span>Nov 2024</span>
+                                    <span class="text-slate-300 md:hidden">•</span>
+                                    <span class="md:hidden text-blue-600 font-medium">ARCHITECTURE</span>
+                                </div>
+                                <div class="md:col-span-7 flex flex-col gap-unit-1">
+                                    <a class="group inline-block" href="#">
+                                        <h4
+                                            class="font-headline-sm text-headline-sm text-slate-900 group-hover:text-blue-600 transition-colors font-semibold">
+                                            The Myth of Microservices for Early-Stage Products
+                                        </h4>
+                                    </a>
+                                    <p class="font-body-sm text-body-sm text-slate-600 max-w-[62ch]">
+                                        A defense of the well-structured modular monolith and a pragmatic rubric for
+                                        when it actually makes sense to fracture service boundaries.
+                                    </p>
+                                </div>
+                                <div
+                                    class="md:col-span-3 flex md:flex-col md:items-end justify-between items-center gap-unit-1 font-mono-tag text-mono-tag">
+                                    <span
+                                        class="hidden md:inline-block text-blue-600 font-medium uppercase tracking-wide">ARCHITECTURE</span>
+                                    <span class="text-slate-400">7 min read</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Article 4 -->
+                        <article
+                            class="essay-item p-unit-6 rounded bg-transparent hover:bg-white hover:shadow-sm border border-transparent hover:border-slate-200 transition-all duration-150"
+                            data-category="observability">
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-unit-4 md:gap-unit-6 items-baseline">
+                                <div
+                                    class="md:col-span-2 font-mono-tag text-mono-tag text-slate-400 flex items-center gap-unit-2">
+                                    <span>Sep 2024</span>
+                                    <span class="text-slate-300 md:hidden">•</span>
+                                    <span class="md:hidden text-blue-600 font-medium">OBSERVABILITY</span>
+                                </div>
+                                <div class="md:col-span-7 flex flex-col gap-unit-1">
+                                    <a class="group inline-block" href="#">
+                                        <h4
+                                            class="font-headline-sm text-headline-sm text-slate-900 group-hover:text-blue-600 transition-colors font-semibold">
+                                            Distributed Tracing Without Telemetry Overhead
+                                        </h4>
+                                    </a>
+                                    <p class="font-body-sm text-body-sm text-slate-600 max-w-[62ch]">
+                                        Practical tail-based sampling techniques and structured context propagation that
+                                        turn production triage into deterministic science.
+                                    </p>
+                                </div>
+                                <div
+                                    class="md:col-span-3 flex md:flex-col md:items-end justify-between items-center gap-unit-1 font-mono-tag text-mono-tag">
+                                    <span
+                                        class="hidden md:inline-block text-blue-600 font-medium uppercase tracking-wide">OBSERVABILITY</span>
+                                    <span class="text-slate-400">5 min read</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Article 5 -->
+                        <article
+                            class="essay-item p-unit-6 rounded bg-transparent hover:bg-white hover:shadow-sm border border-transparent hover:border-slate-200 transition-all duration-150"
+                            data-category="infra">
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-unit-4 md:gap-unit-6 items-baseline">
+                                <div
+                                    class="md:col-span-2 font-mono-tag text-mono-tag text-slate-400 flex items-center gap-unit-2">
+                                    <span>Jul 2024</span>
+                                    <span class="text-slate-300 md:hidden">•</span>
+                                    <span class="md:hidden text-blue-600 font-medium">CASE STUDY</span>
+                                </div>
+                                <div class="md:col-span-7 flex flex-col gap-unit-1">
+                                    <a class="group inline-block" href="#">
+                                        <h4
+                                            class="font-headline-sm text-headline-sm text-slate-900 group-hover:text-blue-600 transition-colors font-semibold">
+                                            Building Powerclip: Lessons in Automated Video Encoding
+                                        </h4>
+                                    </a>
+                                    <p class="font-body-sm text-body-sm text-slate-600 max-w-[62ch]">
+                                        FFmpeg edge cases, Redis task worker dispatching, and hardware memory saturation
+                                        handling across unpredictable real-time batch workloads.
+                                    </p>
+                                </div>
+                                <div
+                                    class="md:col-span-3 flex md:flex-col md:items-end justify-between items-center gap-unit-1 font-mono-tag text-mono-tag">
+                                    <span
+                                        class="hidden md:inline-block text-blue-600 font-medium uppercase tracking-wide">CASE
+                                        STUDY</span>
+                                    <span class="text-slate-400">9 min read</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <!-- Section: Dispatch / Field Log & Minimal Subscription -->
+                <section
+                    class="w-full bg-white border border-slate-200 shadow-sm rounded-lg p-unit-8 md:p-unit-12 mb-unit-16">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-8 items-center">
+                        <div class="lg:col-span-7 flex flex-col gap-unit-2">
+                            <div class="flex items-center gap-unit-2">
+                                <span class="material-symbols-outlined text-slate-400 text-sm">mark_email_read</span>
+                                <h3 class="font-headline-sm text-headline-sm text-slate-900 font-bold">Stay Updated</h3>
+                            </div>
+                            <p class="font-body-md text-body-md text-slate-600 max-w-[50ch]">
+                                Occasional essays on systems engineering, architecture tradeoffs, and craft. Zero
+                                marketing fluff, strictly long-form insights.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-5 flex flex-col gap-unit-3">
+                            <form class="flex flex-col sm:flex-row gap-unit-2 w-full"
+                                onsubmit="event.preventDefault(); document.getElementById('sub-msg').classList.remove('hidden'); this.reset();">
+                                <input
+                                    class="bg-slate-50 border border-slate-200 text-slate-900 font-body-sm text-body-sm px-unit-4 py-unit-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 flex-grow h-10 transition-all placeholder:text-slate-400"
+                                    placeholder="engineer@domain.com" required="" type="email" />
+                                <button
+                                    class="bg-slate-900 text-white font-subheading text-subheading uppercase tracking-widest px-unit-6 py-unit-2 rounded hover:bg-slate-800 transition-colors h-10 flex-shrink-0 cursor-pointer shadow-sm"
+                                    type="submit">
+                                    Dispatch
+                                </button>
+                            </form>
+                            <div class="flex items-center justify-between font-mono-tag text-mono-tag text-slate-500">
+                                <a class="hover:text-blue-600 transition-colors inline-flex items-center gap-1"
+                                    href="#">
+                                    <span>RSS XML Feed</span>
+                                    <span class="text-[10px]">↗</span>
+                                </a>
+                                <span class="text-slate-400">Delivered ~2x per quarter</span>
+                            </div>
+                            <p class="hidden font-mono-tag text-mono-tag text-blue-600 font-medium" id="sub-msg">
+                                ✓ Subscribed. System confirmation dispatched to your inbox.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Client-side Interactive Filter Script -->
+                <script>
+                    (function () {
+                        const buttons = document.querySelectorAll('.filter-btn');
+                        const items = document.querySelectorAll('.essay-item');
+                        const countDisplay = document.getElementById('article-count');
+
+                        buttons.forEach(btn => {
+                            btn.addEventListener('click', () => {
+                                const filter = btn.getAttribute('data-filter');
+
+                                // Style update for active tab
+                                buttons.forEach(b => {
+                                    b.classList.remove('bg-slate-900', 'text-white', 'shadow-sm');
+                                    b.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-600');
+                                });
+                                btn.classList.remove('bg-white', 'border', 'border-slate-200', 'text-slate-600');
+                                btn.classList.add('bg-slate-900', 'text-white', 'shadow-sm');
+
+                                // Filter matching essays
+                                let visibleCount = 0;
+                                items.forEach(item => {
+                                    const category = item.getAttribute('data-category');
+                                    if (filter === 'all' || category === filter) {
+                                        item.style.display = 'block';
+                                        visibleCount++;
+                                    } else {
+                                        item.style.display = 'none';
+                                    }
+                                });
+
+                                if (countDisplay) {
+                                    countDisplay.textContent = `Showing ${visibleCount} essay${visibleCount === 1 ? '' : 's'}`;
+                                }
+                            });
+                        });
+                    })();
+                </script>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full bg-background border-t border-slate-200 mt-unit-24">
+        <div
+            class="h-20 max-w-[1150px] mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-col sm:flex-row items-center justify-between gap-unit-2 font-mono-tag text-mono-tag text-slate-500">
+            <p class="tracking-normal">GEE — Software Engineer</p>
+            <p class="tracking-normal">© 2026</p>
+        </div>
+    </footer>
+</body>
+
+</html>
