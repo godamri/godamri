@@ -1,12 +1,13 @@
 # Godamri — Modern Portfolio & Thought Sharing Platform
 
-Website portofolio profesional dan platform *thought sharing* (technical essays & systems notes) berarsitektur modern dengan **React Router v7 (Vite)**, **SSR (Server-Side Rendering)**, dan target deploy di **Cloudflare Pages**.
+Website portofolio profesional dan platform *thought sharing* (technical essays & systems notes) berarsitektur modern dengan **React Router v7 (Vite)**, **SSR (Server-Side Rendering)** di edge network **Cloudflare Pages** ([godamri.com](https://godamri.com)).
 
 ---
 
 ## 🚀 Fitur Utama
 
 - **React Router v7 Framework Mode + Vite**: SSR edge murni tanpa cold-start berkat runtime Cloudflare Workers/Pages.
+- **7 Selected Engineering Systems**: Portofolio sistem terdistribusi, fintech QRIS/settlement, O2O retail POS, high-concurrency promotions, dan generative AI video pipeline.
 - **Modern Typography & Editorial UI**: Desain minimalis terinspirasi publikasi teknis tingkat tinggi, memadukan font *Inter* untuk narasi editorial dan *JetBrains Mono* untuk metrik, data teknis, serta code snippets.
 - **Thought Sharing Engine**:
   - Artikel teknis ditulis dalam format Markdown (`content/thoughts/*.md`) dengan frontmatter terstruktur.
